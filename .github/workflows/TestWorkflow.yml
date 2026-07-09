@@ -4,7 +4,9 @@ on:
 
 jobs:
   annotations:
-    runs-on: self-hosted
+    runs-on:
+      group: test-runner-group 
+      labels: self-hosted
     steps:
       - name: Echoing only
         run: |
