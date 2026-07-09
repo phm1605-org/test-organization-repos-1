@@ -1,13 +1,11 @@
-name: Test Workflow
+name: Test
+
 on:
   workflow_dispatch:
 
 jobs:
-  annotations:
-    runs-on:
-      group: test-runner-group 
-      labels: self-hosted
+  hello:
+    runs-on: self-hosted
+
     steps:
-      - name: Echoing only
-        run: |
-          echo "Hello World!"
+      - run: echo Hello
